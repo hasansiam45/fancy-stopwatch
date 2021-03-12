@@ -1,6 +1,7 @@
 let millisecond = 0;
 let second = 0;
 let minute = 0;
+let hour = 0;
 let timer;
 
 const stopwatch = document.getElementById('stopWatch');
@@ -23,6 +24,10 @@ function run() {
     if (second === 60) {
         second = 0;
         minute++;
+    }
+    if (minute === 60) {
+        minute = 0;
+        hour++;
     }
 }
 
@@ -51,5 +56,5 @@ function stopTimer() {
 }
 
 function setTime() {
-    return (minute < 10 ? '0' + minute : minute) + ':' + (second < 10 ? '0' + second : second) + ':' + (millisecond < 10 ? '0' + millisecond : millisecond);
+    return (hour < 10 ? '0' + hour : hour) + ':' + (minute < 10 ? '0' + minute : minute) + ':' + (second < 10 ? '0' + second : second) + ':' + (millisecond < 10 ? '0' + millisecond : millisecond);
 }
