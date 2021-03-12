@@ -1,31 +1,56 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background: #2d2d2d;
     color: #f6f6f6;
     text-align: center;
     height: 100vh;
 }
-.stopwatch{
+
+.stopwatch {
     font-size: 15em;
 }
-.controls{
+
+.controls {
     margin-top: 5%;
 }
-button{
+
+button {
     font-size: 24px;
     margin: 15px;
     background: transparent;
     border: 2px solid white;
     color: white;
-    border-radius:12px;
+    border-radius: 12px;
     padding: 5px 15px;
     cursor: pointer;
     outline: none;
 }
-button:hover{
-    background:white;
+
+button:hover {
+    background: white;
     color: #2d2d2d;
+}
+
+
+@media(max-width: 760px) {
+    .stopwatch {
+        font-size: 5em;
+    }
+    button{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 660px) {
+    .stopwatch {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 14px;
+    }
 }
